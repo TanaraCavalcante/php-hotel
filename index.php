@@ -58,7 +58,7 @@
     </header>
     <main class="container">
             <section>
-                <form action="" method="get" style="width: 18rem;">
+                <form action="server.php" method="get" style="width: 18rem;">
                     <div>
                         <select class="form-select mb-3" aria-label="Default select example">
                             <option selected>Do you need a parking?</option>
@@ -66,10 +66,10 @@
                             <option value="2">No</option>
                         </select>
                         <div class="mb-3">
-                            <input class="form-control" id="word" name="stars" placeholder="How many stars in the hotel?"></input>
+                            <input type="number" class="form-control" id="word" name="stars" placeholder="How many stars in the hotel?"></input>
                         </div>
                     </div>
-                    <div >
+                    <div class="mb-5">
                         <button type="submit" class="btn btn-warning">Submit</button>
                         <button type="reset" class="btn btn-outline-warning">Reset</button>
                     </div>
