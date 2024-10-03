@@ -54,6 +54,10 @@
              <ul>
                 <?php  foreach($hotels as $hotel) { ?>
                     <li>  <?php echo $hotel["name"] ?>   </li>
+                    <li>  <?php echo $hotel["description"] ?>   </li>
+                    <li>  <?php echo $hotel["parking"] ?>   </li>
+                    <li>  <?php echo $hotel["vote"] ?>   </li>
+                    <li>  <?php echo $hotel["distance_to_center"] ?> kms  </li>
                 <? } ?>
              </ul>
         </section>
