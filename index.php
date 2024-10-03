@@ -49,6 +49,15 @@
     <title>Hotel</title>
 </head>
 <body>
+    <main>
+        <section>
+             <ul>
+                <?php  foreach($hotels as $hotel) { ?>
+                    <li>  <?php echo $hotel["name"] ?>   </li>
+                <? } ?>
+             </ul>
+        </section>
+    </main>
     
 </body>
 </html>
