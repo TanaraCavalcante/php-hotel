@@ -53,28 +53,46 @@
     <script src="https://kit.fontawesome.com/33f70ca49a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main class="container">
+    <header class="py-3">
         <h2 class="mb-5">Hotel List</h2>
+    </header>
+    <main class="container">
+            <section>
+                <form action="" method="get" style="width: 18rem;">
+                    <div>
+                        <select class="form-select mb-3" aria-label="Default select example">
+                            <option selected>Do you need a parking?</option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select>
+                        <div class="mb-3">
+                            <input class="form-control" id="word" name="stars" placeholder="How many stars in the hotel?"></input>
+                        </div>
+                    </div>
+                    <div >
+                        <button type="submit" class="btn btn-warning">Submit</button>
+                        <button type="reset" class="btn btn-outline-warning">Reset</button>
+                    </div>
+                </form>
+            </section>
             <section class="my-3">
-                <div>
-                    <ul class="list-unstyled">
-                        <?php  foreach($hotels as $hotel) { ?>
-                            <li class="card-title fs-5">  <?php echo $hotel["name"] ?>   </li>
-                            <li class="card-subtitle mb-2 text-muted">  <?php echo $hotel["description"] ?>   </li>
-                            <li class="card-text">  
-                                <?php 
-                                    if($hotel["parking"] === true){
-                                        echo "Has parking!";
-                                    }else{
-                                        echo "No parking!";}
-                                ?>
-                            </li>
-                            <li class="card-text">Vote:  <?php echo $hotel["vote"] ?> <i class="fa-solid fa-star" style="color: #FFD43B;"></i> </li>
-                            <li class="card-text mb-3">Distance to center:  <?php echo $hotel["distance_to_center"] ?> kms  </li>
-                           <hr>
-                        <? } ?>
-                    </ul>
-                </div>
+                <ul class="list-unstyled">
+                    <?php  foreach($hotels as $hotel) { ?>
+                         <li class="card-title fs-5">  <?php echo $hotel["name"] ?>   </li>
+                        <li class="card-subtitle mb-2 text-muted">  <?php echo $hotel["description"] ?>   </li>
+                         <li class="card-text">  
+                            <?php 
+                                if($hotel["parking"] === true){
+                                    echo "Has parking!";
+                                }else{
+                                    echo "No parking!";}
+                            ?>
+                        </li>
+                        <li class="card-text">Vote:  <?php echo $hotel["vote"] ?> <i class="fa-solid fa-star" style="color: #FFD43B;"></i> </li>
+                        <li class="card-text mb-3">Distance to center:  <?php echo $hotel["distance_to_center"] ?> kms  </li>
+                        <hr>
+                    <? } ?>
+                </ul>
             </section>
     </main>
     
